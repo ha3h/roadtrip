@@ -1,0 +1,79 @@
+/* Custom font for a clean look */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8; /* Light blue-gray background */
+}
+/* Basic styling for pre-formatted text to ensure readability */
+pre {
+    white-space: pre-wrap; /* Ensures long lines wrap */
+    word-wrap: break-word; /* Breaks words if necessary */
+    background-color: #e2e8f0; /* Lighter background for code/output */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    overflow-x: auto; /* Allows horizontal scrolling for very long lines if needed */
+}
+.container {
+    max-width: 90%; /* Fluid width for responsiveness */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between sections */
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.input-group label {
+    font-weight: 600;
+    color: #334155; /* Darker text for labels */
+}
+.input-field {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1; /* Light gray border */
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #475569; /* Medium gray text */
+}
+.btn-primary {
+    background-color: #3b82f6; /* Blue button */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+}
+.btn-primary:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* --- CHANGE START --- */
+/* Changed from .loading-indicator to #loadingMessage */
+#loadingMessage {
+    display: none; /* Hidden by default */
+    text-align: center;
+    color: #64748b; /* Gray text for loading */
+    font-style: italic;
+}
+/* Changed from .error-message to #errorMessage */
+#errorMessage {
+    color: #ef4444; /* Red text for errors */
+    text-align: center;
+    font-weight: 500;
+}
+/* --- CHANGE END --- */
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .container {
+        max-width: 700px; /* Wider on desktop */
+    }
+}
